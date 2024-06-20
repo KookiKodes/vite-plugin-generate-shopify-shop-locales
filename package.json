@@ -1,6 +1,6 @@
 {
   "name": "vite-plugin-generate-shopify-shop-locales",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Zero-config vite plugin that fetches and generates you're Storefront's shop locales",
   "license": "MIT",
   "author": "Kooki-Kodes",
