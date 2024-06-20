@@ -1,3 +1,5 @@
+import fetch from 'node-fetch';
+
 type Options = {
   shopDomain: string;
   apiVersion: string;
@@ -43,7 +45,7 @@ export async function getShopLocalization({
       body: JSON.stringify({ query: GetShopLocalization }),
     },
   );
-  const jsonRes = await res.json();
+  const jsonRes = (await res.json()) as any;
   if (jsonRes?.errors) throw jsonRes.errors;
   return jsonRes?.data?.localization as ShopLocalizationResult;
 }
