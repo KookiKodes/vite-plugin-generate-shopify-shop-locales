@@ -78,7 +78,7 @@ export function GenerateShopifyShopLocales(options?: Options): Plugin {
     load(id) {
       if (id === resolvedVirtualModuleId) {
         return `
-          const shopLocales = JSON.parse("${JSON.stringify(shopLocales)}");
+          const shopLocales = JSON.parse(\`${JSON.stringify(shopLocales)}\`);
           export default shopLocales;
         `;
       }
